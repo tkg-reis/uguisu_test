@@ -1,0 +1,75 @@
+// footer section
+
+@use 'breakpoints' as bp;
+@use 'variable' as var;
+@use 'mixin' as min;
+
+.l_footer {
+    width: 100%;
+    margin-top: 60px;
+
+    &_nav {
+        @include min.flex(start, start);
+        flex-direction: column;
+        margin-left: 24px;
+
+        &.__sp {
+            @include bp.mq() {
+                display: none;
+            }
+        }
+
+        &.__pc {
+            padding-bottom: 50px;
+
+            & .l_footer_item {
+
+                @include bp.mq() {
+                    font-size: 18px;
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+
+    &_item {
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 14px;
+
+        &:not(:first-child) {
+            margin-top: 10px;
+        }
+    }
+
+    &__container {
+        margin-top: 30px;
+        padding-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        &.__sp {
+            @include bp.mq() {
+                display: none;
+            }
+        }
+
+        &.__pc {
+            @include bp.mq() {
+                display: flex;
+                flex-direction: column;
+                margin-top: 0px;
+            }
+        }
+    }
+
+    &_pc {
+        display: none;
+
+        @include bp.mq() {
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+}

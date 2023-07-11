@@ -1,0 +1,145 @@
+// header section
+
+@use 'breakpoints' as bp;
+@use 'variable' as var;
+@use 'mixin' as min;
+
+.l_header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+
+    @include bp.mq() {
+        @include min.flex(space-between);
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &_logo {
+        margin: 12px;
+
+        &__sentence {
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 20px;
+
+            @include bp.mq() {
+                font-size: 30px;
+                line-height: 37px;
+            }
+        }
+    }
+    
+    &_sp {
+        background-color: var.$baseWhite-color;
+        height: 60px;
+        width: 60px;
+        border-bottom-left-radius: 15px;
+        cursor: pointer;
+        z-index: 2;
+        position: relative;
+
+        @include bp.mq() {
+            display: none;
+        }
+    }
+    
+    &_hamburger {
+        width: 30px;
+        height: 30px;
+        display: block;
+        
+        &__bar {
+            position: absolute;
+            transition: all .25s;
+            width: 100%;
+            height: 1px;
+            background-color: var.$green-color;
+            
+            &:nth-child(1) {
+                width: 80%;
+                top: 20%;
+                right: 0;
+            }
+
+            &:nth-child(2) {
+                width: 70%;
+                top: 90%;
+                right: 0;
+            }
+        }
+
+    }
+
+    .l_hamburger {
+        
+        &__container {
+            display: none;
+
+            // &.opened {
+            //     display: block;
+            //     position: fixed;
+            //     left: 0;
+            //     top: 0;
+            //     width: 100%;
+            //     height: 100%;
+            //     background-color: red;
+            //     z-index: 1;
+            // }
+        }
+
+    //     &_nav {
+    //         margin-left: 24px;
+    //     }
+    
+    //     &_item {
+    //         font-size: 10px;
+    //         font-weight: 500;
+    //         line-height: 14px;
+    
+    //         &:not(:first-child) {
+    //             margin-top: 10px;
+    //         }
+    //     }
+    
+    //     &__container {
+    //         margin-top: 30px;
+    //         display: flex;
+    //         align-items: center;
+    //         gap: 16px;
+    //     }
+    }
+
+    &_pc {
+        display: none;
+
+        @include bp.mq(){
+            display: block;
+        }
+
+
+    }
+
+    &_list {
+        @include min.flex(space-between,start);
+    }
+
+    &_item {
+        font-size: 18px;
+        font-weight: 600;
+
+        &:not(:first-child) {
+            margin-left: 28px;
+        }
+
+        &:last-child {
+            margin-right: 50px;
+        }
+    }
+
+
+}

@@ -1,0 +1,47 @@
+// utility
+
+@use 'variable' as var;
+@use 'mixin' as min;
+@use 'breakpoints' as bp;
+
+.u_mission-circle {
+    border-radius: 100vh;
+    border: 1px dotted var.$yellow-color;
+    width: 300px;
+    height: 300px;
+    // animation: rotate 7s none infinite;
+    position: relative;
+    z-index: -1;
+
+    @include bp.mq() {
+        width: 400px;
+        height: 400px;
+    }
+    
+    img {
+        position: absolute;
+
+        &:nth-child(1) {
+            top: 17%;
+            left: 5%;
+        }
+        &:nth-child(2) {
+            bottom: -3%;
+            left: 47%;
+        }
+        &:nth-child(3) {
+            bottom: 74%;
+            right: 3%;
+        }
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
