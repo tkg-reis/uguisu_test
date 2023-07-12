@@ -943,17 +943,17 @@ body {
   -webkit-animation: stepline 1s steps(6) infinite;
           animation: stepline 1s steps(6) infinite;
   padding: 26px 0;
-  background: url("../../img/bird-line_sp.png") no-repeat;
+  background: url("../img/bird-line_sp.png") no-repeat;
 }
 @media screen and (min-width: 768px) {
   .m_services__container {
-    background: url("../../img/bird-line.png") no-repeat;
+    background: url("../img/bird-line.png") no-repeat;
   }
 }
 @media screen and (min-width: 1440px) {
   .m_services__container {
     background-position: 0 0;
-    background: url("../../img/bird-line.png") no-repeat;
+    background: url("../img/bird-line.png") no-repeat;
   }
 }
 @-webkit-keyframes stepline {
@@ -1688,7 +1688,7 @@ body {
 .u_bird-steps .u_bird-step {
   width: 300px;
   height: 50px;
-  background: url("../../img/bird_line_sp__works__top.png") no-repeat;
+  background: url("../img/bird_line_sp__works__top.png") no-repeat;
   -webkit-animation: stepline 3s steps(4) infinite;
           animation: stepline 3s steps(4) infinite;
 }
@@ -1697,7 +1697,7 @@ body {
   height: 300px;
   width: 50%;
   background-position: 0 0;
-  background: url("../../img/bird_line-footer_pc.png") no-repeat;
+  background: url("../img/bird_line-footer_pc.png") no-repeat;
   -webkit-animation: stepline 3s steps(4) infinite;
           animation: stepline 3s steps(4) infinite;
 }
@@ -2064,7 +2064,7 @@ body {
 .contact_img-wrapper.__contact {
   -webkit-animation: stepline 1s steps(4) infinite;
           animation: stepline 1s steps(4) infinite;
-  background: url("../../img/bird-line_sp.png") no-repeat;
+  background: url("../img/bird-line_sp.png") no-repeat;
   max-width: 500px;
   padding: 24px;
 }
@@ -2084,7 +2084,7 @@ body {
 .contact_img-wrapper.__contact-pc {
   -webkit-animation: steplinecontact 1s steps(4) infinite;
           animation: steplinecontact 1s steps(4) infinite;
-  background: url("../../img/bird-line_sp.png") no-repeat;
+  background: url("../img/bird-line_sp.png") no-repeat;
   max-width: 500px;
   padding: 24px;
 }
