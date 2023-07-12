@@ -42,8 +42,17 @@ body {
 
             @include set.mq(){
                 position: relative;
-                top: 73%;
-                left: 0%;
+                top: 0%;
+                left: 10%;
+                white-space: nowrap;
+                font-size: 50px;
+                font-weight: 700;
+            }
+
+            @include set.mq(xl){
+                position: relative;
+                top: 200%;
+                left: 15%;
                 white-space: nowrap;
                 font-size: 70px;
                 font-weight: 700;
@@ -58,8 +67,17 @@ body {
 
             @include set.mq(){
                 position: relative;
-                left: -45%;
-                top: 135%;
+                left: -30%;
+                top: 50%;
+                white-space: nowrap;
+                font-size: 60px;
+                font-weight: 700;
+            }
+
+            @include set.mq(xl){
+                position: relative;
+                left: -30%;
+                top: 280%;
                 white-space: nowrap;
                 font-size: 60px;
                 font-weight: 700;
@@ -88,8 +106,14 @@ body {
 
                 @include set.mq() {
                     display: block;
-                    transform: translateY(-21%);
-                    width: 70%;
+                    transform: translateY(-36%);
+                    width: 80%;
+                }
+
+                @include set.mq(xl) {
+                    display: block;
+                    transform: translateY(-13%);
+                    width: 100%;
                 }
             }
         }
@@ -145,17 +169,33 @@ body {
         justify-content: center;
         align-items: center;
         background-color: set.$lightWhite-color;
+
+        @include set.mq(xl) {
+            font-size: 13px;
+            line-height: 18px;
+        }
+
+        & .m_services__pc-bp {
+            @include set.mq() {
+                display: none;
+            }
+        }
+
         
         &.__first {
             background-color: set.$deepWhite-color;
             height: 25px;
+
+            @include set.mq(xl) {
+                font-size: 16px;
+                line-height: 22px;
+            }
         }
     }
 
     &-data {
         width: 80%;
         height: 100%;
-
         padding: 16px;
         border-radius: 10px;
         background-color: set.$baseWhite-color;
@@ -163,9 +203,25 @@ body {
         justify-content: center;
         align-items: center;
 
+        @include set.mq(xl) {
+            font-size: 13px;
+            line-height: 18px;
+        }
+
+        & .m_services__pc-bp {
+            @include set.mq() {
+                display: none;
+            }
+        }
+
         &.__first {
             background-color: set.$deepWhite-color;
             height: 25px;
+
+            @include set.mq(xl) {
+                font-size: 16px;
+                line-height: 22px;
+            }
         }
     }
 }
@@ -173,7 +229,7 @@ body {
 // company
 
 .company_info__container {
-    @include set.flex(start, start);
+    @include set.flex(flex-start,flex-start);
     flex-direction: column;
 }
 
@@ -182,8 +238,41 @@ body {
 .contact {
 
     &_img-wrapper.__contact {
+
+        animation: stepline 1s steps(4) infinite;
+        background: url("../../img/bird-line_sp.png") no-repeat;
+        // background-position: 0 0;
+        max-width: 500px;
+        padding: 24px;
+        // margin: 10px auto;
         @include set.mq() {
             display: none;
+        }
+    }
+
+    @keyframes stepline {
+        0%{
+            background-position: 6px -3px;
+        }
+        100%{
+            background-position: 30px 0;
+        }
+    }
+
+    &_img-wrapper.__contact-pc {
+        animation: steplinecontact 1s steps(4) infinite;
+        background: url("../../img/bird-line_sp.png") no-repeat;
+        // background-position: 0 0;
+        max-width: 500px;
+        padding: 24px;
+    }
+
+    @keyframes steplinecontact {
+        0%{
+            background-position: 262px -2px;
+        }
+        100%{
+            background-position: 30px 0;
         }
     }
     
@@ -228,6 +317,12 @@ body {
     &_button__link {
         font-weight: 600;
         font-size: 15px;
+        white-space: nowrap;
+
+        @include set.mq(xl) {
+            font-size: 20px;
+            line-height: 20px;
+        }
     }
 
     &_pc {
@@ -237,7 +332,6 @@ body {
             display: flex;
             align-items: center;
             justify-content: space-around;
-            margin-top: 200px;
         }
     }
 }

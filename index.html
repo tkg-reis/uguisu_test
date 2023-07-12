@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" class="html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -52,43 +52,51 @@
             <nav class="l_hamburger_nav">
                 <ul class="l_hamburger_list">
                     <li class="l_hamburger_item">
-                        <a href="" class="l_hamburger_link">
+                        <a href="#home" class="l_hamburger_link">
                             HOME
                         </a>
                     </li>
                     <li class="l_hamburger_item">
-                        <a href="" class="l_hamburger_link">
+                        <a href="#mission" class="l_hamburger_link">
                             MISSION
                         </a>
                     </li>
                     <li class="l_hamburger_item">
-                        <a href="" class="l_hamburger_link">
-                            SERVICE
+                        <a href="#services" class="l_hamburger_link">
+                            SERVICES
                         </a>
                     </li>
                     <li class="l_hamburger_item">
-                        <a href="" class="l_hamburger_link">
+                        <a href="#works" class="l_hamburger_link">
                             WORKS
                         </a>
                     </li>
                     <li class="l_hamburger_item">
-                        <a href="" class="l_hamburger_link">
+                        <a href="#works" class="l_hamburger_link">
                             RECRUIT
                         </a>
                     </li>
                     <li class="l_hamburger_item">
-                        <a href="" class="l_hamburger_link">
+                        <a href="#company" class="l_hamburger_link">
                             COMPANY
                         </a>
                     </li>
                     <li class="l_hamburger_item">
-                        <a href="" class="l_hamburger_link">
+                        <a href="#contact" class="l_hamburger_link">
                             CONTACT
                         </a>
                     </li>
                 </ul>
             </nav>
-            <div class="l_hamburger__container">
+            <div class="u_bird-line">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <img src="./img/bird02.png" alt="">
+            </div>
+            <div class="l_hamburger__wrapper">
                 <div class="l_hamburger__logo-wrapper">
                     <img src="./img/footer_logo.png" alt="" class="l_footer__logo">
                 </div>
@@ -104,32 +112,37 @@
             <nav class="l_header_nav">
                 <ul class="l_header_list">
                     <li class="l_header_item">
-                        <a class="l_header_link">
+                        <a href="#home" class="l_header_link">
+                            HOME
+                        </a>
+                    </li>
+                    <li class="l_header_item">
+                        <a href="#mission" class="l_header_link">
                             MISSION
                         </a>
                     </li>
                     <li class="l_header_item">
-                        <a class="l_header_link">
-                            SERVICE
+                        <a href="#services" class="l_header_link">
+                            SERVICES
                         </a>
                     </li>
                     <li class="l_header_item">
-                        <a class="l_header_link">
+                        <a href="#works" class="l_header_link">
                             WORKS
                         </a>
                     </li>
                     <li class="l_header_item">
-                        <a class="l_header_link">
+                        <a href="#recruit" class="l_header_link">
                             RECRUIT
                         </a>
                     </li>
                     <li class="l_header_item">
-                        <a class="l_header_link">
+                        <a href="#company" class="l_header_link">
                             COMPANY
                         </a>
                     </li>
                     <li class="l_header_item">
-                        <a class="l_header_link">
+                        <a href="#contact" class="l_header_link">
                             CONTACT
                         </a>
                     </li>
@@ -140,7 +153,7 @@
     <!-- main -->
     <main class="main">
         <!-- key visual key sentence -->
-        <section class="kv_ks">
+        <section class="kv_ks" id="home">
             <div class="kv_container">
                 <img src="./img/U あしらい.png" alt="キービジュアルです" class="kv_img">
                 <img src="./img/Uあしらいbig.png" alt="" class="kv_img__pc">
@@ -159,9 +172,10 @@
             <img src="./img/fireworks_icon_sp.png" alt="">
         </div>
         <!-- mission section -->
-        <section class="mission">
+        <section class="mission" id="mission">
             <div class="l_container">
                 <div class="m_section_title__container __mission">
+                    
                     <h2 class="m_section_title __mission">
                         MISSI
                         <span class="m_section_title__accent mission-accent">O</span>
@@ -169,7 +183,7 @@
                     </h2>
                     <p class="m_section_subtitle __mission">
                         Webサービスの企画・開発支援を通して
-                        <br>
+                        <br class="m_services__pc-bp">
                         すべての人のチャレンジを加速させます。
                     </p>
                 </div>
@@ -226,11 +240,17 @@
                         <img src="./img/bird02.png" alt="">
                         <img src="./img/bird03.png" alt="">
                     </div>
+                    <div class="m_icon-small__pc">
+                        <img src="./img/smallFireworks.png" alt="">
+                    </div>
+                    <div class="m_icon-big__pc">
+                        <img src="./img/bigFireworks.png" alt="">
+                    </div>
                 </div>
             </div>
         </section>
         <!-- services section -->
-        <section class="services">
+        <section class="services" id="services">
             <div class="m_icon-middle">
                 <img src="./img/fireworks_middle_sp.png" alt="">
             </div>
@@ -240,9 +260,13 @@
                     <span class="m_section_title__accent services-accent">C</span>
                     ES
                 </h2>
+                <div class="m_icon-middle__pc">
+                    <img src="./img/fireworks_middle_pc.png" alt="">
+                </div>
             </div>
             <div class="m_services__container">
                 <!-- sp -->
+                <div class="u_bird-step"></div>
                 <div class="m_services__wrapper __sp">
                     <div class="m_services__img-title">
                         <div class="m_services__img-wrapper">
@@ -357,25 +381,31 @@
             </div>
         </section>
         <!-- works -->
-        <section class="works">
+        <section class="works" id="works">
             <div class="l_container">
                 <div class="m_section_title__container __works">
                     <h2 class="m_section_title __works">
                         W
                         <span class="m_section_title__accent works-accent">O</span>
                         RKS
+                        <div class="m_icon-middle__pc __works">
+                            <img src="./img/fireworks_works_pc.png" alt="">
+                        </div>
                     </h2>
                     <p class="m_section_subtitle __works">
                         スタートアップから大手の開発まで
-                        <br>
+                        <br class="m_services__pc-bp">
                         さまざまな規模の実績があります。
                         <br>
                         どの案件も受託かエンジニアチームを
-                        <br>
+                        <br class="m_services__pc-bp">
                         派遣しての設計開発で、
                         <br>
                         新規開発から保守運用まで行いました。
                     </p>
+                </div>
+                <div class="u_bird-steps">
+                    <div class="u_bird-step"></div>
                 </div>
                 <table class="works_table">
                     <tbody class="works_table-body">
@@ -390,14 +420,14 @@
                         <tr class="works_table-row">
                             <th class="works_table-head">
                                 シリーズAの
-                                <br>
+                                <br class="m_services__pc-bp">
                                 スタートアップ
                             </th>
                             <td class="works_table-data">
                                 PM含むエンジニアチームを派遣し、学生向
                                 <br>
                                 けのインターンプラットフォームの企画支援
-                                <br>
+                                <br class="m_services__pc-bp">
                                 や開発を行いました。企画支援やマネジメン
                                 <br>
                                 トから開発保守運用までを担当しています。
@@ -406,7 +436,7 @@
                         <tr class="works_table-row">
                             <th class="works_table-head">
                                 プレシリーズAの
-                                <br>
+                                <br class="m_services__pc-bp">
                                 スタートアップ
                             </th>
                             <td class="works_table-data">
@@ -415,7 +445,7 @@
                                 テム部門を弊社で担当しました。AWSを用
                                 <br>
                                 いたインフラの保守や新規構築からプロダク
-                                <br>
+                                <br class="m_services__pc-bp">
                                 トの開発保守までまるっと行
                                 <br>
                                 いました。
@@ -424,14 +454,14 @@
                         <tr class="works_table-row">
                             <th class="works_table-head">
                                 大手コンサル
-                                <br>
+                                <br class="m_services__pc-bp">
                                 （Big4）
                             </th>
                             <td class="works_table-data">
                                 大規模なシステムリプレイスプロジェクトの
                                 <br>
                                 1チームとして参画しました。PM含むメン
-                                <br>
+                                <br class="m_services__pc-bp">
                                 バーで20名規模のチームのマネジメントを行
                                 <br>
                                 い、設計から開発テストまで担当しました。
@@ -447,7 +477,7 @@
                                 新規プロダクトの受託開発を行いました。数
                                 <br>
                                 千万規模の開発を少数精鋭のエンジニアチー
-                                <br>
+                                <br class="m_services__pc-bp">
                                 ムで担当し、スピード感のあるリリースを行い
                                 <br>
                                 ました。
@@ -455,25 +485,31 @@
                         </tr>
                     </tbody>
                 </table>
+                <div class="u_bird-steps __works-bottom">
+                    <div class="u_bird-step"></div>
+                </div>
             </div>
         </section>
-        <!-- recruit -->
         <div class="m_icon-small">
             <img src="./img/fireworks_icon_sp.png" alt="">
         </div>
-        <section class="recruit">
+        <!-- recruit -->
+        <section class="recruit" id="recruit">
             <div class="l_container">
                 <div class="m_section_title__container __recruit">
                     <h2 class="m_section_title __recruit">
                         RE
                         <span class="m_section_title__accent recruit-accent">C</span>
                         RUIT
+                        <div class="m_icon-middle__pc __recruit">
+                            <img src="./img/fireworks_recruit_pc.png" alt="">
+                        </div>
                     </h2>
                     <p class="m_section_subtitle __recruit">
                         一人一人に寄り添ったキャリアプランの
                         <br>
                         構築を支援します。技術に尖る以外にも、
-                        <br>
+                        <br class="m_services__pc-bp">
                         起業家やコンサルタントを目指した
                         <br>
                         キャリアプランの構築が可能です。
@@ -534,7 +570,7 @@
             </div>
         </section>
         <!-- company -->
-        <section class="company">
+        <section class="company" id="company">
             <div class="l_container">
                 <div class="m_section_title__container __company">
                     <h2 class="m_section_title __company">
@@ -544,6 +580,12 @@
                     </h2>
                 </div>
                 <div class="company_info">
+                    <div class="m_icon-middle__pc __company-sm">
+                        <img src="./img/fireworks_brown_pc-sm.png" alt="">
+                    </div>
+                    <div class="m_icon-middle__pc __company-md">
+                        <img src="./img/fireworks_brown_pc-md.png" alt="">
+                    </div>
                     <div class="company_info__img-wrapper">
                         <img src="./img/U あしらい 02.png" alt="" class="company_info__img">
                         <img src="./img/U_company_pc.png" alt="" class="company_info__img__pc">
@@ -598,11 +640,11 @@
                 </div>
             </div>
         </section>
-        <!-- contact -->
         <div class="m_icon-big">
             <img src="./img/fireworks_big_sp.png" alt="">
         </div>
-        <section class="contact">
+        <!-- contact -->
+        <section class="contact" id="contact">
             <div class="l_container">
                 <div class="m_section_title__container __contact">
                     <h2 class="m_section_title __contact">
@@ -617,15 +659,17 @@
                     </p>
                 </div>
                 <div class="contact_img-wrapper __contact">
-                    <!-- 擬似要素で影作成 -->
                     <img src="./img/womanworker.png" alt="" class="contact_img">
                 </div>
                 <div class="contact_button-wrapper __contact">
-                    <a href="" class="contact_button__link">
+                    <a href="https://forms.gle/x3c6o4gDMv5J5c3y6" class="contact_button__link">
                         <button class="contact_btn">
                             お問い合わせ
                         </button>
                     </a>
+                </div>
+                <div class="u_bird-steps __contact">
+                    <div class="u_bird-step"></div>
                 </div>
                 <div class="contact_pc">
                     <div class="m_section_title__container __pc">
@@ -640,15 +684,14 @@
                             その他お問い合わせはこちらから
                         </p>
                         <div class="contact_button-wrapper __pc">
-                            <a href="" class="contact_button__link">
+                            <a href="https://forms.gle/x3c6o4gDMv5J5c3y6" class="contact_button__link">
                                 <button class="contact_btn">
                                     お問い合わせ
                                 </button>
                             </a>
                         </div>
                     </div>
-                    <div class="contact_img-wrapper">
-                        <!-- 擬似要素で影作成 -->
+                    <div class="contact_img-wrapper __contact-pc">
                         <img src="./img/womanworker.png" alt="" class="contact_img">
                     </div>
                 </div>
@@ -660,37 +703,37 @@
         <nav class="l_footer_nav __sp">
             <ul class="l_footer_list">
                 <li class="l_footer_item">
-                    <a href="" class="l_footer_link">
+                    <a href="#home" class="l_footer_link">
                         HOME
                     </a>
                 </li>
                 <li class="l_footer_item">
-                    <a href="" class="l_footer_link">
+                    <a href="#mission" class="l_footer_link">
                         MISSION
                     </a>
                 </li>
                 <li class="l_footer_item">
-                    <a href="" class="l_footer_link">
-                        SERVICE
+                    <a href="services" class="l_footer_link">
+                        SERVICES
                     </a>
                 </li>
                 <li class="l_footer_item">
-                    <a href="" class="l_footer_link">
+                    <a href="#works" class="l_footer_link">
                         WORKS
                     </a>
                 </li>
                 <li class="l_footer_item">
-                    <a href="" class="l_footer_link">
+                    <a href="#recruit" class="l_footer_link">
                         RECRUIT
                     </a>
                 </li>
                 <li class="l_footer_item">
-                    <a href="" class="l_footer_link">
+                    <a href="#company" class="l_footer_link">
                         COMPANY
                     </a>
                 </li>
                 <li class="l_footer_item">
-                    <a href="" class="l_footer_link">
+                    <a href="#contact" class="l_footer_link">
                         CONTACT
                     </a>
                 </li>
@@ -707,7 +750,6 @@
             </div>
         </div>
         <div class="l_footer_pc">
-            
             <div class="l_footer__container __pc">
                 <div class="l_footer__logo-wrapper">
                     <img src="./img/footer_logo.png" alt="" class="l_footer__logo">
@@ -718,40 +760,41 @@
                     </small>
                 </div>
             </div>
+            <div class="u_bird-steps__footer"></div>
             <nav class="l_footer_nav __pc">
                 <ul class="l_footer_list">
                     <li class="l_footer_item">
-                        <a href="" class="l_footer_link">
+                        <a href="#home" class="l_footer_link">
                             HOME
                         </a>
                     </li>
                     <li class="l_footer_item">
-                    <a href="" class="l_footer_link">
+                    <a href="#mission" class="l_footer_link">
                         MISSION
                     </a>
                 </li>
                 <li class="l_footer_item">
-                    <a href="" class="l_footer_link">
-                        SERVICE
+                    <a href="#services" class="l_footer_link">
+                        SERVICES
                     </a>
                 </li>
                 <li class="l_footer_item">
-                    <a href="" class="l_footer_link">
+                    <a href="#works" class="l_footer_link">
                         WORKS
                     </a>
                 </li>
                 <li class="l_footer_item">
-                    <a href="" class="l_footer_link">
+                    <a href="#recruit" class="l_footer_link">
                         RECRUIT
                     </a>
                 </li>
                 <li class="l_footer_item">
-                    <a href="" class="l_footer_link">
+                    <a href="#company" class="l_footer_link">
                         COMPANY
                     </a>
                 </li>
                 <li class="l_footer_item">
-                    <a href="" class="l_footer_link">
+                    <a href="#contact" class="l_footer_link">
                         CONTACT
                     </a>
                 </li>

@@ -21,54 +21,26 @@ switchViewport();
 
 
 
-// ハンバーガーメニュー01
-// openクラスの作成
-
-// header toggle animation
-
-// const toggleWrapper = document.querySelector('.js_toggle');
-
-// const respMenu = document.querySelector('.hamburger_menu');
-
-// const toggleBarBottom = document.querySelector('.js_toggle_bottom');
-// const headerLogo = document.querySelector('.l_header_logo');
-
-// const c = document.querySelector("body");
-// console.log(c.parentNode);
-// console.log(c.parentElement);
-
-// let done = true;
-// toggleWrapper.addEventListener("click",() => {
-//     respMenu.classList.add('opened');
-//     toggleBarBottom.style.visibility = "hidden";
-//     headerLogo.style.visibility = "hidden";
-//     c.parentNode.style.overFlowY = "hidden";
-//     setTimeout(() => {
-//         done = false;
-//     },100)
-// });
-
-// document.addEventListener('click',() => {
-//     if(done === false) {
-//         respMenu.classList.remove('opened');
-//         toggleBarBottom.style.visibility = "visible";
-//         headerLogo.style.visibility = "visible";
-//         c.parentNode.style.overFlowY = "scroll";
-//         setTimeout(() => {
-//             done = true;
-//         },100);
-//     }
-// });
-
-// ハンバーガーメニュー02（画面幅一杯型）
-
-// const open = document.getElementById("example");
-// const closeOne = document.getElementById("example2");
-// const closeTwo = document.getElementById("example3");
-// const container = document.getElementById("example4");
-// open.addEventListener("click",() => {
-//     container.style.display = "block";
-// });
+const open = document.querySelector(".js_toggle");
+const container = document.querySelector(".hamburger_menu");
+const html = document.querySelector(".html")
+const shortBar = document.querySelector('.short-bar');
+let opened = false;
+open.addEventListener("click",() => {
+    container.style.display = "block";
+    shortBar.style.opacity = "0";
+    html.style.overflow = "hidden"
+    setTimeout(() => {
+        opened = !opened
+    }, 100);
+});
+open.addEventListener("click", () => {
+    if(!opened){
+        container.style.display = "none";
+        shortBar.style.opacity = "1";
+        html.style.overflow = "scroll";
+    }
+})
 // closeOne.addEventListener("click",() => {
 //     container.style.display = "none";
 // });
@@ -81,119 +53,55 @@ switchViewport();
 //     };
 // });
 
-// header hide and exist animation
-// スマートフォン時のheaderの見え隠れ処理
-
-// let width = window.innerWidth;
-
-// if(width < 768) {
-//     const header = document.querySelector('.header');
-//     let scrollPoint = 0; 
-//     let lastPoint = 0; 
-    
-//     window.addEventListener("scroll",function(){
-        
-//         scrollPoint = window.scrollY;
-        
-//         if(scrollPoint > lastPoint){ 
-//             header.classList.add('header_hide');
-//         }else{ 
-//             header.classList.remove('header_hide');
-//         }
-
-//         lastPoint = scrollPoint;
-//         // ここでリセット
-//     });
-// }
-
-// page top animation
-// ページの上部への処理
-
-// const toThetop = document.querySelector(".m_topToBtn");
-
-// toThetop.addEventListener("click", scroll_top);
-
-// function scroll_top() {
-//     window.scrollTo({ 
-//         behavior: "smooth",
-//         top: 0
-//     });
-// }
-
-//ページの上部へのボタンの見え隠れ処理 
-
-// window.addEventListener("scroll", scroll_event);
-// function scroll_event() {
-//     if (window.pageYOffset > 100) {
-//         toThetop.style.opacity = "1";
-//     } else if (window.pageYOffset < 100) {
-//         toThetop.style.opacity = "0";
-//     }
-// }
 
 // 各セクションへの導線処理
 // PC時
-// let links = document.querySelectorAll('.header_item__link');
-// links.forEach((link) => {
-//     link.addEventListener('click', (e) => {
-//         e.preventDefault();
-//         let target = document.querySelector(link.hash);
-//         let jump = window.pageYOffset + target.getBoundingClientRect().top;
-//         // ヘッダー込みの場合adjustなどの変数で調整する。
-//         // let adjust = ヘッダーの高さ；
-//         window.scrollTo({
-//             top: jump,
-//             behavior: "smooth"
-//         });
-//     });
-// });
+let links = document.querySelectorAll('.l_hamburger_link');
+links.forEach((link) => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        container.style.display = "none";
+        shortBar.style.opacity = "1";
+        html.style.overflow = "scroll";
+
+        let target = document.querySelector(link.hash);
+        let jump = window.pageYOffset + target.getBoundingClientRect().top;
+        // ヘッダー込みの場合adjustなどの変数で調整する。
+        // let adjust = ヘッダーの高さ；
+        window.scrollTo({
+            top: jump,
+            behavior: "smooth"
+        });
+    });
+});
 
 // all end
 
 // page modules
 
-// アコーディオン処理
+// services 
 
-// const menu = document.querySelectorAll('.example');
-        
-// function acordion() {
-//     const content = this.nextElementSibling;
-//     this.classList.toggle('is_active');
-//     content.classList.toggle('is_open');
-// }
-    
-// for(let i = 0; i < menu.length; i++) {
-//     menu[i].addEventListener("click",acordion);
-// };
+let wrappers = document.querySelectorAll('.m_services__wrapper');
 
-// タブの切り替え↓　参考html
-{/* <ul class="tabs">
-                <li><a href="" class="active">タブ1</a></li>
-                <li><a href="">タブ2</a></li>
-                <li><a href="">タブ3</a></li>
-            </ul>
-            <ul class="contents">
-                <li class="active">コンテンツ1コンテンツ1コンテンツ1コンテンツ1コンテンツ1コンテンツ1コンテンツ1コンテンツ1コンテンツ1コンテンツ1コンテンツ1コンテンツ1コンテンツ1コンテンツ1コンテンツ1コンテンツ1コンテンツ1コンテンツ1コンテンツ1コンテンツ1コンテンツ1コンテンツ1コンテンツ1コンテンツ1コンテンツ1コンテンツ1</li>
-                <li>コンテンツ2コンテンツ2コンテンツ2コンテンツ2コンテンツ2コンテンツ2コンテンツ2コンテンツ2コンテンツ2コンテンツ2コンテンツ2コンテンツ2コンテンツ2コンテンツ2コンテンツ2コンテンツ2コンテンツ2コンテンツ2コンテンツ2コンテンツ2コンテンツ2コンテンツ2コンテンツ2コンテンツ2コンテンツ2コンテンツ2コンテンツ2</li>
-                <li>コンテンツ3コンテンツ3コンテンツ3コンテンツ3コンテンツ3コンテンツ3コンテンツ3コンテンツ3コンテンツ3コンテンツ3コンテンツ3コンテンツ3コンテンツ3コンテンツ3コンテンツ3コンテンツ3コンテンツ3コンテンツ3コンテンツ3コンテンツ3コンテンツ3コンテンツ3コンテンツ3コンテンツ3コンテンツ3コンテンツ3コンテンツ3</li>
-</ul> */}
+let gl = gsap.timeline();
+// gsap.registerPlugin(ScrollTrigger);
 
-// const tabs = document.querySelectorAll('.tabs li a');
-//     const contents = document.querySelectorAll('.contents li');
-//     console.log(tabs,contents);
-//     for(let i = 0; i < tabs.length; i++) {
-//         tabs[i].addEventListener('click',(e) => {
-//             e.preventDefault();
-//             for(let c = 0; c < tabs.length; c++) {
-//                 tabs[c].classList.remove('active');
-//             }
-//             for(let c = 0; c < contents.length; c++) {
-//                 contents[c].classList.remove('active');
-//             }
-//             tabs[i].classList.add('active');
-//             contents[i].classList.add('active');
-//         });
-//     }
+wrappers.forEach((wrapper,i) => {
+    gsap.set(wrapper, {
+        autoAlpha: 0,
+    })
+    gsap.to(wrapper, {
+        duration: 1,
+        autoAlpha: 1,
+        scrollTrigger: {
+            trigger: wrapper,
+            start: "bottom bottom",
+            end :"+=100",
+            // markers: true,
+            delay: i * 0.7
+        }
+    })
+})
 
 
 // modules end
