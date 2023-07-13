@@ -75,6 +75,37 @@ links.forEach((link) => {
     });
 });
 
+let pcLinks = document.querySelectorAll('.l_header_pc .l_header_link');
+pcLinks.forEach(pcLink => {
+    pcLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        let target = document.querySelector(pcLink.hash);
+        console.log(target.getBoundingClientRect());
+        let jump = window.pageYOffset + target.getBoundingClientRect().top;
+        // ヘッダー込みの場合adjustなどの変数で調整する。
+        // let adjust = ヘッダーの高さ；
+        window.scrollTo({
+            top: jump,
+            behavior: "smooth"
+        });
+    });
+})
+
+let footetLinks = document.querySelectorAll('.l_footer_link');
+footetLinks.forEach(footerLink => {
+    footerLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        let target = document.querySelector(footerLink.hash);
+        let jump = window.pageYOffset + target.getBoundingClientRect().top;
+        // ヘッダー込みの場合adjustなどの変数で調整する。
+        // let adjust = ヘッダーの高さ；
+        window.scrollTo({
+            top: jump,
+            behavior: "smooth"
+        });
+    });
+})
+
 // all end
 
 // page modules
@@ -91,7 +122,7 @@ wrappers.forEach((wrapper,i) => {
         autoAlpha: 0,
     })
     gsap.to(wrapper, {
-        duration: 1,
+        duration: 3,
         autoAlpha: 1,
         scrollTrigger: {
             trigger: wrapper,

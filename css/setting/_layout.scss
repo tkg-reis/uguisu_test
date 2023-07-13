@@ -1,7 +1,14 @@
 // layout
+
+@use 'breakpoints' as bp;
+@use 'variable' as var;
+@use 'mixin' as min;
+
 html {
     overflow-x: hidden;
 }
+
+
 
 body {
     overflow-x: hidden;
@@ -11,6 +18,7 @@ body {
     margin: 0 auto;
     width: 92%;
     max-width: 1080px;
+    padding: 0 20px;
 }
 
 // end
