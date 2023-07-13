@@ -825,11 +825,21 @@ body {
   }
 }
 .m_mission_content__wrapper:nth-of-type(1) {
-  top: -15%;
+  top: -50%;
 }
 @media screen and (min-width: 768px) {
   .m_mission_content__wrapper:nth-of-type(1) {
-    top: -30%;
+    top: -83%;
+  }
+}
+@media screen and (min-width: 1080px) {
+  .m_mission_content__wrapper:nth-of-type(1) {
+    top: -55%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .m_mission_content__wrapper:nth-of-type(1) {
+    top: -39%;
   }
 }
 .m_mission_content__wrapper:nth-of-type(1) .m_misson_content__title {
@@ -866,13 +876,25 @@ body {
   }
 }
 .m_mission_content__wrapper:nth-of-type(2) {
-  bottom: -30%;
-  left: -3%;
+  bottom: -94%;
+  left: -8%;
 }
 @media screen and (min-width: 768px) {
   .m_mission_content__wrapper:nth-of-type(2) {
-    bottom: -30%;
+    bottom: -83%;
     left: -25%;
+  }
+}
+@media screen and (min-width: 1080px) {
+  .m_mission_content__wrapper:nth-of-type(2) {
+    bottom: -66%;
+    left: -20%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .m_mission_content__wrapper:nth-of-type(2) {
+    bottom: -40%;
+    left: -23%;
   }
 }
 .m_mission_content__wrapper:nth-of-type(2) .m_misson_content__title {
@@ -909,12 +931,24 @@ body {
   }
 }
 .m_mission_content__wrapper:nth-of-type(3) {
-  bottom: -26%;
-  right: -2%;
+  bottom: -86%;
+  right: -6%;
 }
 @media screen and (min-width: 768px) {
   .m_mission_content__wrapper:nth-of-type(3) {
-    bottom: -28%;
+    bottom: -75%;
+    right: -25%;
+  }
+}
+@media screen and (min-width: 1080px) {
+  .m_mission_content__wrapper:nth-of-type(3) {
+    bottom: -61%;
+    right: -25%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .m_mission_content__wrapper:nth-of-type(3) {
+    bottom: -38%;
     right: -25%;
   }
 }
@@ -961,8 +995,8 @@ body {
 .m_services__container {
   width: 100%;
   overflow-x: hidden;
-  -webkit-animation: stepline 1s steps(6) infinite;
-          animation: stepline 1s steps(6) infinite;
+  -webkit-animation: stepline 20s steps(16) infinite;
+          animation: stepline 20s steps(16) infinite;
   padding: 26px 0;
   background: url("../img/bird-line_sp.png") no-repeat;
 }
@@ -1304,10 +1338,12 @@ body {
 }
 .company_info__img-wrapper .company_info__img {
   display: block;
+  margin-left: 18px;
 }
 @media screen and (min-width: 768px) {
   .company_info__img-wrapper .company_info__img {
     display: none;
+    margin-left: 0;
   }
 }
 .company_info__img-wrapper .company_info__img__pc {
@@ -1402,7 +1438,7 @@ body {
   margin: 12px;
 }
 .l_header_logo:hover {
-  opacity: 0.9;
+  opacity: 0.6;
 }
 .l_header_logo__sentence {
   font-weight: 600;
@@ -1493,16 +1529,15 @@ body {
   font-size: 20px;
   font-weight: 600;
   line-height: 14px;
-  margin: 15px 0;
 }
 .l_header .l_hamburger_item:hover {
-  opacity: 0.9;
+  opacity: 0.6;
 }
 .l_header .l_hamburger_item:not(:first-child) {
-  margin-top: 8px;
+  padding-top: 20px;
 }
 .l_header .l_hamburger_link:hover {
-  opacity: 0.9;
+  opacity: 0.6;
 }
 .l_header .l_hamburger__wrapper {
   margin-top: 66px;
@@ -1540,7 +1575,7 @@ body {
   height: 100%;
 }
 .l_header_item:hover {
-  opacity: 0.9;
+  opacity: 0.6;
 }
 @media screen and (min-width: 1440px) {
   .l_header_item {
@@ -1562,9 +1597,10 @@ body {
 .l_header_link {
   display: block;
   height: 100%;
+  padding: 16px 0;
 }
 .l_header_link:hover {
-  opacity: 0.9;
+  opacity: 0.6;
 }
 
 .l_footer {
@@ -1609,13 +1645,16 @@ body {
   line-height: 14px;
 }
 .l_footer_item:hover {
-  opacity: 0.9;
+  opacity: 0.6;
 }
 .l_footer_item:not(:first-child) {
   margin-top: 10px;
 }
+.l_footer_link {
+  padding: 16px 0;
+}
 .l_footer_link:hover {
-  opacity: 0.9;
+  opacity: 0.6;
 }
 .l_footer__container {
   margin-top: 30px;
@@ -1671,90 +1710,96 @@ body {
 }
 
 .u_mission-circle {
-  border-radius: 100vh;
-  border: 1px dotted #d9e27e;
   width: 300px;
-  height: 300px;
-  -webkit-animation: rotate 10s none infinite;
-          animation: rotate 10s none infinite;
+  height: 100%;
+  margin: auto;
   position: relative;
-  z-index: -1;
+  -webkit-transform: translate(0%, -90%);
+          transform: translate(0%, -90%);
+  margin: 0 auto;
 }
 @media screen and (min-width: 768px) {
   .u_mission-circle {
     width: 400px;
-    height: 400px;
+    -webkit-transform: translateY(-45%);
+            transform: translateY(-45%);
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1080px) {
   .u_mission-circle {
     width: 500px;
-    height: 500px;
+    -webkit-transform: translateY(-22%);
+            transform: translateY(-22%);
   }
 }
-.u_mission-circle img {
+@media screen and (min-width: 1440px) {
+  .u_mission-circle {
+    width: 500px;
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+}
+.u_mission-circle::after {
+  background: url("../img/bird-circle02.png");
+  display: block;
+  content: "";
+  width: 100%;
+  height: 500px;
   position: absolute;
-}
-.u_mission-circle img:nth-child(1) {
-  top: 17%;
-  left: 5%;
-}
-.u_mission-circle img:nth-child(2) {
-  bottom: -3%;
-  left: 47%;
-}
-.u_mission-circle img:nth-child(3) {
-  bottom: 74%;
-  right: 3%;
+  top: 0;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-animation-name: rotate;
+          animation-name: rotate;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  -webkit-animation-timing-function: cubic-bezier(0.5, 0.51, 0.51, 0.52);
+          animation-timing-function: cubic-bezier(0.5, 0.51, 0.51, 0.52);
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  z-index: -1;
 }
 
 @-webkit-keyframes rotate {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
   }
   100% {
-    -webkit-transform: rotate(-360deg);
-            transform: rotate(-360deg);
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
   }
 }
 
 @keyframes rotate {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
   }
   100% {
-    -webkit-transform: rotate(-360deg);
-            transform: rotate(-360deg);
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
   }
 }
 .u_bird-steps {
-  margin: 20px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  height: 100px;
   width: 100%;
 }
 .u_bird-steps.__works-bottom {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  -webkit-transform: rotateZ(-180deg);
+          transform: rotateZ(-180deg);
 }
 .u_bird-steps.__contact {
   display: none;
 }
 .u_bird-steps .u_bird-step {
-  width: 300px;
-  height: 50px;
-  background: url("../img/bird_line_sp__works__top.png") no-repeat;
-  -webkit-animation: stepline 3s steps(4) infinite;
-          animation: stepline 3s steps(4) infinite;
+  width: 1440px;
+  height: 40px;
+  margin: auto;
+  background: url("../img/uguRtoL4.png") no-repeat, url("../img/bird02.png") no-repeat;
+  -webkit-animation: stepline 20s steps(19) infinite;
+          animation: stepline 20s steps(19) infinite;
 }
 
 .u_bird-steps__footer {
@@ -1762,16 +1807,16 @@ body {
   width: 50%;
   background-position: 0 0;
   background: url("../img/bird_line-footer_pc.png") no-repeat;
-  -webkit-animation: stepline 3s steps(4) infinite;
-          animation: stepline 3s steps(4) infinite;
+  -webkit-animation: stepline 20s steps(16) infinite;
+          animation: stepline 20s steps(16) infinite;
 }
 
 @keyframes stepline {
   0% {
-    background-position: left top;
+    background-position: 0 0;
   }
   100% {
-    background-position: 100px 0;
+    background-position: -27360px 0;
   }
 }
 .u_bird-line {
@@ -1973,24 +2018,24 @@ body {
 @media screen and (min-width: 768px) {
   .kv_ks .kv_container .kv_img__pc {
     display: block;
-    -webkit-transform: translateY(-36%);
-            transform: translateY(-36%);
+    -webkit-transform: translateY(-22%);
+            transform: translateY(-22%);
     width: 80%;
   }
 }
 @media screen and (min-width: 1080px) {
   .kv_ks .kv_container .kv_img__pc {
     display: block;
-    -webkit-transform: translateY(-10%);
-            transform: translateY(-10%);
+    -webkit-transform: translateY(-12%);
+            transform: translateY(-12%);
     width: 80%;
   }
 }
 @media screen and (min-width: 1440px) {
   .kv_ks .kv_container .kv_img__pc {
     display: block;
-    -webkit-transform: translateY(-13%);
-            transform: translateY(-13%);
+    -webkit-transform: translateY(-8%);
+            transform: translateY(-8%);
     width: 100%;
   }
 }
@@ -2012,6 +2057,12 @@ body {
   margin: 40px auto;
   position: relative;
   max-width: 440px;
+  height: 30vh;
+}
+@media screen and (min-width: 768px) {
+  .mission_content__container {
+    height: 40vh;
+  }
 }
 
 .works_table {
@@ -2060,8 +2111,9 @@ body {
       -ms-flex-align: center;
           align-items: center;
   background-color: #e6e8dc;
+  font-size: 10px;
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 768px) {
   .works_table-head {
     font-size: 13px;
     line-height: 18px;
@@ -2097,8 +2149,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-size: 10px;
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 768px) {
   .works_table-data {
     font-size: 13px;
     line-height: 18px;
@@ -2137,8 +2190,8 @@ body {
 }
 
 .contact_img-wrapper.__contact {
-  -webkit-animation: stepline 1s steps(4) infinite;
-          animation: stepline 1s steps(4) infinite;
+  -webkit-animation: stepline 20s steps(16) infinite;
+          animation: stepline 20s steps(16) infinite;
   background: url("../img/bird-line_sp.png") no-repeat;
   max-width: 500px;
   padding: 24px;
@@ -2157,8 +2210,8 @@ body {
   }
 }
 .contact_img-wrapper.__contact-pc {
-  -webkit-animation: steplinecontact 1s steps(4) infinite;
-          animation: steplinecontact 1s steps(4) infinite;
+  -webkit-animation: steplinecontact 20s steps(16) infinite;
+          animation: steplinecontact 20s steps(16) infinite;
   background: url("../img/bird-line_sp.png") no-repeat;
   max-width: 500px;
   padding: 24px;

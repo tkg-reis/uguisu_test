@@ -334,10 +334,17 @@
         }
 
         &:nth-of-type(1) {
-            top: -15%;
+            top: -50%;
 
             @include bp.mq() {
-                top: -30%;
+                top: -83%;
+            }
+
+            @include bp.mq(lg) {
+                top: -55%;
+            }
+            @include bp.mq(xl) {
+                top: -39%;
             }
 
             .m_misson_content__title {
@@ -373,12 +380,20 @@
         }
 
         &:nth-of-type(2) {
-            bottom: -30%;
-            left: -3%;
+            bottom: -94%;
+            left: -8%;
 
             @include bp.mq() {
-                bottom: -30%;
+                bottom: -83%;
                 left: -25%;
+            }
+            @include bp.mq(lg) {
+                bottom: -66%;
+                left: -20%;
+            }
+            @include bp.mq(xl) {
+                bottom: -40%;
+                left: -23%;
             }
 
             .m_misson_content__title {
@@ -414,11 +429,19 @@
         }
 
         &:nth-of-type(3) {
-            bottom: -26%;
-            right: -2%;
+            bottom: -86%;
+            right: -6%;
 
             @include bp.mq() {
-                bottom: -28%;
+                bottom: -75%;
+                right: -25%;
+            }
+            @include bp.mq(lg) {
+                bottom: -61%;
+                right: -25%;
+            }
+            @include bp.mq(xl) {
+                bottom: -38%;
                 right: -25%;
             }
 
@@ -467,7 +490,7 @@
     &__container {
         width: 100%;
         overflow-x: hidden;
-        animation: stepline 1s steps(6) infinite;
+        animation: stepline 20s steps(16) infinite;
         padding: 26px 0;
         background: url("../../img/bird-line_sp.png") no-repeat;
         @include bp.mq() {
@@ -758,9 +781,11 @@
     &__img-wrapper {
         & .company_info__img {
             display: block;
+            margin-left: 18px;
 
             @include bp.mq() {
                 display: none;
+                margin-left: 0;
             }
         }
 

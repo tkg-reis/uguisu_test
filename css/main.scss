@@ -109,19 +109,19 @@ body {
 
                 @include set.mq() {
                     display: block;
-                    transform: translateY(-36%);
+                    transform: translateY(-22%);
                     width: 80%;
                 }
 
                 @include set.mq(lg) {
                     display: block;
-                    transform: translateY(-10%);
+                    transform: translateY(-12%);
                     width: 80%;
                 }
 
                 @include set.mq(xl) {
                     display: block;
-                    transform: translateY(-13%);
+                    transform: translateY(-8%);
                     width: 100%;
                 }
             }
@@ -136,6 +136,11 @@ body {
     margin: 40px auto;
     position: relative;
     max-width: 440px;
+    height: 30vh;
+
+    @include set.mq() {
+        height: 40vh;
+    }
 }
 
 // works
@@ -178,8 +183,9 @@ body {
         justify-content: center;
         align-items: center;
         background-color: set.$lightWhite-color;
+        font-size: 10px;
 
-        @include set.mq(xl) {
+        @include set.mq() {
             font-size: 13px;
             line-height: 18px;
         }
@@ -211,8 +217,9 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+        font-size: 10px;
 
-        @include set.mq(xl) {
+        @include set.mq() {
             font-size: 13px;
             line-height: 18px;
         }
@@ -248,7 +255,7 @@ body {
 
     &_img-wrapper.__contact {
 
-        animation: stepline 1s steps(4) infinite;
+        animation: stepline 20s steps(16) infinite;
         background: url("../../img/bird-line_sp.png") no-repeat;
         // background-position: 0 0;
         max-width: 500px;
@@ -269,7 +276,7 @@ body {
     }
 
     &_img-wrapper.__contact-pc {
-        animation: steplinecontact 1s steps(4) infinite;
+        animation: steplinecontact 20s steps(16) infinite;
         background: url("../../img/bird-line_sp.png") no-repeat;
         // background-position: 0 0;
         max-width: 500px;

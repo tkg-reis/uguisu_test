@@ -5,58 +5,66 @@
 @use 'breakpoints' as bp;
 
 .u_mission-circle {
-    border-radius: 100vh;
-    border: 1px dotted var.$yellow-color;
+
     width: 300px;
-    height: 300px;
-    animation: rotate 10s none infinite;
+    height: 100%;
+    margin: auto;
     position: relative;
-    z-index: -1;
+    transform: translate(0%,-90%);
+    margin: 0 auto;
 
     @include bp.mq() {
         width: 400px;
-        height: 400px;
+        transform: translateY(-45%);
     }
 
-    @include bp.mq() {
+    @include bp.mq(lg) {
         width: 500px;
-        height: 500px;
+        transform: translateY(-22%);
     }
-    
-    img {
-        position: absolute;
 
-        &:nth-child(1) {
-            top: 17%;
-            left: 5%;
-        }
-        &:nth-child(2) {
-            bottom: -3%;
-            left: 47%;
-        }
-        &:nth-child(3) {
-            bottom: 74%;
-            right: 3%;
-        }
+    @include bp.mq(xl) {
+        width: 500px;
+        transform: translateY(-10%);
     }
+
+    &::after {
+        background: url("../../img/bird-circle02.png");
+        display: block;
+        content: "";
+        width: 100%;
+        height: 500px;
+        position: absolute;
+        top: 0;
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        animation-name: rotate;
+        animation-duration: 10s;
+        animation-timing-function: cubic-bezier(0.5, 0.51, 0.51, 0.52);
+        animation-iteration-count: infinite;
+        z-index: -1;
+    }
+
 }
 
 @keyframes rotate {
     0% {
-        transform: rotate(0deg);
+        transform: rotateZ(360deg);
     }
     100% {
-        transform: rotate(-360deg);
+        transform: rotateZ(0deg);
     }
 }
 
 .u_bird-steps {
-    margin: 20px 0;
-    @include min.flex();
+    // margin: 20px 0;
+    height: 100px;
+    // @include min.flex();
     width: 100%;
 
     &.__works-bottom {
-        transform: rotate(180deg);
+        transform: rotateZ(-180deg);
     }
 
     &.__contact {
@@ -64,10 +72,17 @@
     }
     
     .u_bird-step {
-        width: 300px;
-        height: 50px;
-        background: url("../../img/bird_line_sp__works__top.png") no-repeat;
-        animation: stepline 3s steps(4) infinite;
+        // width: 300px;
+        // height: 50px;
+        // background: url("../../img/bird_line_sp__works__top.png") no-repeat;
+        // animation: stepline 3s steps(4) infinite;
+
+        width: 1440px;
+        height: 40px;
+        margin: auto;
+        background: url("../../img/uguRtoL4.png") no-repeat, url("../../img/bird02.png") no-repeat;
+        animation: stepline 20s steps(19) infinite;
+        // transition-duration: 5s;
     }
 }
 
@@ -76,15 +91,15 @@
     width: 50%;
     background-position: 0 0;
     background: url("../../img/bird_line-footer_pc.png") no-repeat;
-    animation: stepline 3s steps(4) infinite;
+    animation: stepline 20s steps(16) infinite;
 }
 
 @keyframes stepline {
     0%{
-        background-position: left top;
+        background-position: 0 0;
     }
     100%{
-        background-position: 100px 0;
+        background-position: -27360px 0;
     }
 }
 
