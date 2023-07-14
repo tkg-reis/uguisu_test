@@ -9,6 +9,9 @@
         font-weight: 700;
         font-size: 24px;
         margin-top: 60px;
+        letter-spacing: 6px;
+        text-align: center;
+        color: var.$green-color;
 
         @include bp.mq() {
             font-size: 40px;
@@ -58,6 +61,7 @@
                 @include bp.mq() {
                     @include min.flex(flex-start, center);
                     flex-direction: column;
+                    text-align: left;
 
                 }
             }
@@ -324,6 +328,7 @@
         @include min.flex();
         flex-direction: column;
         position: absolute;
+        z-index: 10;
 
         @include bp.mq() {
             width: 320px;

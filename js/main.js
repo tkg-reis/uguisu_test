@@ -24,20 +24,39 @@ switchViewport();
 const open = document.querySelector(".js_toggle");
 const container = document.querySelector(".hamburger_menu");
 const html = document.querySelector(".html")
+const longBar = document.querySelector('.long-bar');
 const shortBar = document.querySelector('.short-bar');
 let opened = false;
+gsap.set(container, {
+    x: -100,
+    autoAlpha: 0,
+})
 open.addEventListener("click",() => {
+    gsap.to(container , {
+        x:0,
+        autoAlpha: 1,
+        duration: 2,
+    })
+    shortBar.classList.add("is_active");
+    longBar.classList.add("is_active");
     container.style.display = "block";
-    shortBar.style.opacity = "0";
+    // shortBar.style.opacity = "0";
     html.style.overflow = "hidden"
     setTimeout(() => {
         opened = !opened
-    }, 100);
+    }, 10);
 });
 open.addEventListener("click", () => {
     if(!opened){
+        gsap.to(container, {
+            x:-100,
+            autoAlpha: 0,
+            duration: 1,
+        })
+        shortBar.classList.remove("is_active");
+        longBar.classList.remove("is_active");
         container.style.display = "none";
-        shortBar.style.opacity = "1";
+        // shortBar.style.opacity = "1";
         html.style.overflow = "scroll";
     }
 })

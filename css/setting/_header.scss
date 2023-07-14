@@ -13,6 +13,8 @@
     @include bp.mq() {
         @include min.flex(space-between);
         position: fixed;
+        background-color: #fff;
+        opacity: 0.6;
     }
 
     &__container {
@@ -77,12 +79,24 @@
                 width: 80%;
                 top: 50%;
                 right: 0;
+                transition: all .25s;
+                
+                &.is_active {
+                    transform: rotate(-45deg) translate(-25%,-10%);
+
+                }
             }
 
             &:nth-child(2) {
                 width: 50%;
                 top: 90%;
                 right: 0;
+                transition: all .25s;
+
+                &.is_active {
+                    transform: rotate(-135deg) translate(25%,125%);
+                    width: 80%;
+                }
             }
         }
 
@@ -174,12 +188,12 @@
             margin-left: 16px;
             
             @include bp.mq(xl){
-                    margin-left:28px;
+                    margin-left:24px;
                 }
                 
         }
         &:last-child {
-            margin-right: 30px;
+            margin-right: 20px;
         }
     }
 
