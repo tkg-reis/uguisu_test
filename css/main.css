@@ -839,12 +839,12 @@ body {
 }
 @media screen and (min-width: 1080px) {
   .m_mission_content__wrapper:nth-of-type(1) {
-    top: -55%;
+    top: -43%;
   }
 }
 @media screen and (min-width: 1440px) {
   .m_mission_content__wrapper:nth-of-type(1) {
-    top: -39%;
+    top: -25%;
   }
 }
 .m_mission_content__wrapper:nth-of-type(1) .m_misson_content__title {
@@ -892,14 +892,14 @@ body {
 }
 @media screen and (min-width: 1080px) {
   .m_mission_content__wrapper:nth-of-type(2) {
-    bottom: -66%;
-    left: -20%;
+    bottom: -46%;
+    left: -13%;
   }
 }
 @media screen and (min-width: 1440px) {
   .m_mission_content__wrapper:nth-of-type(2) {
-    bottom: -40%;
-    left: -23%;
+    bottom: 0%;
+    left: -21%;
   }
 }
 .m_mission_content__wrapper:nth-of-type(2) .m_misson_content__title {
@@ -947,14 +947,14 @@ body {
 }
 @media screen and (min-width: 1080px) {
   .m_mission_content__wrapper:nth-of-type(3) {
-    bottom: -61%;
-    right: -25%;
+    bottom: -43%;
+    right: -27%;
   }
 }
 @media screen and (min-width: 1440px) {
   .m_mission_content__wrapper:nth-of-type(3) {
-    bottom: -38%;
-    right: -25%;
+    bottom: 2%;
+    right: -27%;
   }
 }
 .m_mission_content__wrapper:nth-of-type(3) .m_misson_content__title {
@@ -1502,20 +1502,20 @@ body {
   transition: all 0.25s;
 }
 .l_header_hamburger__bar:nth-child(1).is_active {
-  -webkit-transform: rotate(-45deg) translate(-25%, -10%);
-          transform: rotate(-45deg) translate(-25%, -10%);
+  top: 60%;
+  right: 0%;
 }
 .l_header_hamburger__bar:nth-child(2) {
   width: 50%;
   top: 90%;
-  right: 0;
+  right: 0%;
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
 }
 .l_header_hamburger__bar:nth-child(2).is_active {
-  -webkit-transform: rotate(-135deg) translate(25%, 125%);
-          transform: rotate(-135deg) translate(25%, 125%);
   width: 80%;
+  top: 60%;
+  right: 0%;
 }
 .l_header .l_hamburger__container {
   display: none;
@@ -1748,15 +1748,15 @@ body {
 @media screen and (min-width: 1080px) {
   .u_mission-circle {
     width: 500px;
-    -webkit-transform: translateY(-22%);
-            transform: translateY(-22%);
+    -webkit-transform: translateY(-12%);
+            transform: translateY(-12%);
   }
 }
 @media screen and (min-width: 1440px) {
   .u_mission-circle {
     width: 500px;
-    -webkit-transform: translateY(-10%);
-            transform: translateY(-10%);
+    -webkit-transform: translateY(-4%);
+            transform: translateY(-4%);
   }
 }
 .u_mission-circle::after {
@@ -1806,20 +1806,46 @@ body {
   height: 100px;
   width: 100%;
 }
-.u_bird-steps.__works-bottom {
-  -webkit-transform: rotateZ(-180deg);
-          transform: rotateZ(-180deg);
-}
 .u_bird-steps.__contact {
   display: none;
 }
-.u_bird-steps .u_bird-step {
+.u_bird-steps .u_bird-step.__works-top {
+  width: 1440px;
+  height: 30px;
+  margin: auto;
+  background: url("../img/uguLtoR2.png") no-repeat;
+  -webkit-animation: stepline 20s steps(19) infinite;
+          animation: stepline 20s steps(19) infinite;
+}
+.u_bird-steps .u_bird-step.__works-bottom {
   width: 1440px;
   height: 40px;
   margin: auto;
-  background: url("../img/uguRtoL4.png") no-repeat, url("../img/bird02.png") no-repeat;
+  background: url("../img/uguRtoL4.png") no-repeat;
+  background-position: 0 0;
   -webkit-animation: stepline 20s steps(19) infinite;
           animation: stepline 20s steps(19) infinite;
+  margin-top: 20px;
+  -webkit-transform: translateX(-80%);
+          transform: translateX(-80%);
+}
+@media screen and (min-width: 768px) {
+  .u_bird-steps .u_bird-step.__works-bottom {
+    -webkit-transform: translateX(-53%);
+            transform: translateX(-53%);
+  }
+}
+@media screen and (min-width: 1080px) {
+  .u_bird-steps .u_bird-step.__works-bottom {
+    -webkit-transform: translateX(-36%);
+            transform: translateX(-36%);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .u_bird-steps .u_bird-step.__works-bottom {
+    -webkit-transform: translateX(-30%);
+            transform: translateX(-30%);
+  }
 }
 
 .u_bird-steps__footer {
@@ -1827,8 +1853,8 @@ body {
   width: 50%;
   background-position: 0 0;
   background: url("../img/bird_line-footer_pc.png") no-repeat;
-  -webkit-animation: stepline 20s steps(16) infinite;
-          animation: stepline 20s steps(16) infinite;
+  -webkit-animation: stepline 20s steps(19) infinite;
+          animation: stepline 20s steps(19) infinite;
 }
 
 @keyframes stepline {
@@ -2084,6 +2110,16 @@ body {
     height: 40vh;
   }
 }
+@media screen and (min-width: 1080px) {
+  .mission_content__container {
+    height: 50vh;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .mission_content__container {
+    height: 60vh;
+  }
+}
 
 .works_table {
   width: 100%;
@@ -2255,7 +2291,7 @@ body {
 .contact_img {
   -webkit-box-shadow: 50px 20px 0 #f9faf1;
           box-shadow: 50px 20px 0 #f9faf1;
-  border-radius: 100px;
+  border-radius: 100vh;
   margin-left: 24px;
 }
 @media screen and (min-width: 768px) {

@@ -141,6 +141,14 @@ body {
     @include set.mq() {
         height: 40vh;
     }
+    @include set.mq(lg) {
+        height: 50vh;
+    }
+    @include set.mq(xl) {
+        height: 60vh;
+    }
+
+
 }
 
 // works
@@ -294,7 +302,7 @@ body {
     
     &_img {
         box-shadow: 50px 20px 0 set.$baseWhite-color;
-        border-radius: 100px;
+        border-radius: 100vh;
         margin-left: 24px;
 
         @include set.mq() {

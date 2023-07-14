@@ -346,10 +346,10 @@
             }
 
             @include bp.mq(lg) {
-                top: -55%;
+                top: -43%;
             }
             @include bp.mq(xl) {
-                top: -39%;
+                top: -25%;
             }
 
             .m_misson_content__title {
@@ -393,12 +393,12 @@
                 left: -25%;
             }
             @include bp.mq(lg) {
-                bottom: -66%;
-                left: -20%;
+                bottom: -46%;
+                left: -13%;
             }
             @include bp.mq(xl) {
-                bottom: -40%;
-                left: -23%;
+                bottom: 0%;
+                left: -21%;
             }
 
             .m_misson_content__title {
@@ -442,12 +442,12 @@
                 right: -25%;
             }
             @include bp.mq(lg) {
-                bottom: -61%;
-                right: -25%;
+                bottom: -43%;
+                right: -27%;
             }
             @include bp.mq(xl) {
-                bottom: -38%;
-                right: -25%;
+                bottom: 2%;
+                right: -27%;
             }
 
             .m_misson_content__title {

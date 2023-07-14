@@ -20,12 +20,12 @@
 
     @include bp.mq(lg) {
         width: 500px;
-        transform: translateY(-22%);
+        transform: translateY(-12%);
     }
 
     @include bp.mq(xl) {
         width: 500px;
-        transform: translateY(-10%);
+        transform: translateY(-4%);
     }
 
     &::after {
@@ -63,26 +63,47 @@
     // @include min.flex();
     width: 100%;
 
-    &.__works-bottom {
-        transform: rotateZ(-180deg);
-    }
+    // &.__works-bottom {
+        
+    // }
 
     &.__contact {
         display: none;
     }
     
-    .u_bird-step {
+    .u_bird-step.__works-top {
         // width: 300px;
         // height: 50px;
         // background: url("../../img/bird_line_sp__works__top.png") no-repeat;
         // animation: stepline 3s steps(4) infinite;
 
         width: 1440px;
-        height: 40px;
+        height: 30px;
         margin: auto;
-        background: url("../../img/uguRtoL4.png") no-repeat, url("../../img/bird02.png") no-repeat;
+        background: url("../../img/uguLtoR2.png") no-repeat;
         animation: stepline 20s steps(19) infinite;
         // transition-duration: 5s;
+    }
+
+    .u_bird-step.__works-bottom {
+        width: 1440px;
+        height: 40px;
+        margin: auto;
+        background:url("../../img/uguRtoL4.png") no-repeat;
+        background-position: 0 0;
+        animation: stepline 20s steps(19) infinite;
+        margin-top: 20px;
+        transform: translateX(-80%);
+
+        @include bp.mq() {
+            transform: translateX(-53%);
+        }
+        @include bp.mq(lg) {
+            transform: translateX(-36%);
+        }
+        @include bp.mq(xl) {
+            transform: translateX(-30%);
+        }
     }
 }
 
@@ -91,7 +112,7 @@
     width: 50%;
     background-position: 0 0;
     background: url("../../img/bird_line-footer_pc.png") no-repeat;
-    animation: stepline 20s steps(16) infinite;
+    animation: stepline 20s steps(19) infinite;
 }
 
 @keyframes stepline {
